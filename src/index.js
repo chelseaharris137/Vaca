@@ -2,9 +2,11 @@ import React from "react";
 import ReactDom from "react-dom";
 
 const App = () => {
+  const env = process.env.NODE_ENV;
   return (
     <div>
-      <h1>Hello world!</h1>
+      <h1>{env}</h1>
+      <p>Hello world!</p>
     </div>
   );
 };
