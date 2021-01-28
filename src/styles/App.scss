@@ -21,3 +21,16 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.logo {
+  font-family: "Pacifico", cursive;
+  color: #e9dbad;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  height: 160px;
+}
+.logo-text {
+  padding-top: 20px;
+}

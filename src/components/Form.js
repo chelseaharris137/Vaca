@@ -18,7 +18,7 @@ const BackgroundBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem auto;
+  margin: 2rem auto;
   position: relative;
   border-radius: 5px;
 
@@ -33,7 +33,7 @@ const BackgroundBox = styled.div`
     z-index: ${(props) => (props.clicked ? "700" : "-700")};
     animation: ${(props) => (props.clicked ? "none" : move)} 1.5s;
     transform: ${(props) =>
-      props.clicked ? "translateX(-140%)" : "translateX(50%)"};
+      props.clicked ? "translateX(-100%)" : "translateX(50%)"};
     transition: transform 1s ease-in-out;
   }
   .signin {
@@ -49,7 +49,7 @@ const BackgroundBox = styled.div`
     top: 0%;
     text-align: center;
     z-index: ${(props) => (props.clicked ? "500" : "-500")};
-    transform: ${(props) => (props.clicked ? "translateX(50%)" : "none")};
+    transform: ${(props) => (props.clicked ? "translateX(70%)" : "none")};
     transition: all 1s;
   }
 `;
@@ -61,7 +61,7 @@ const Box1 = styled.div`
   left: 0;
   top: 0;
   transform: ${(props) =>
-    props.clicked ? "translateX(90%)" : "translateX(10%)"};
+    props.clicked ? "translateX(90%)" : "translateX(0%)"};
   transition: transform 1s;
   &::after,
   &::before {
@@ -87,7 +87,7 @@ const Box2 = styled.div`
   top: 0;
   z-index: 600;
   transform: ${(props) =>
-    props.clicked ? "translateX(-122%)" : "translateX(0%)"};
+    props.clicked ? "translateX(-102%)" : "translateX(0%)"};
   transition: transform 1s;
   border-radius: ${(props) => (props.clicked ? "5px 0 0 5px" : "0 5px 5px 0")};
 `;
@@ -166,7 +166,7 @@ const ButtonAnimate = styled.button`
   top: 70%;
   border: none;
   cursor: pointer;
-  right: ${(props) => (props.clicked ? "57%" : "47%")};
+  right: ${(props) => (props.clicked ? "48%" : "47%")};
   transform: ${(props) => (props.clicked ? "rotate(360deg)" : "rotate(0)")};
   transition: all 1.5s;
   background: transparent;
@@ -204,63 +204,68 @@ const FormComp = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   return (
-    <BackgroundBox clicked={click}>
-      <ButtonAnimate clicked={click} onClick={handleClick}></ButtonAnimate>
+    <div>
+      <div className="logo">
+        <p className="logo-text">Vaca</p>
+      </div>
+      <BackgroundBox clicked={click}>
+        <ButtonAnimate clicked={click} onClick={handleClick}></ButtonAnimate>
 
-      <Form className="signin">
-        <Title>Sign In</Title>
-        <Input type="email" name="email" id="emailId" placeholder="Email" />
-        <Input
-          type="password"
-          name="password"
-          id="passwordId"
-          placeholder="Password"
-        />
-        <Link href="#">Forgot Your Password?</Link>
-        <Button>Sign In</Button>
-      </Form>
+        <Form className="signin">
+          <Title>Sign In</Title>
+          <Input type="email" name="email" id="emailId" placeholder="Email" />
+          <Input
+            type="password"
+            name="password"
+            id="passwordId"
+            placeholder="Password"
+          />
+          <Link href="#">Forgot Your Password?</Link>
+          <Button>Sign In</Button>
+        </Form>
 
-      <Form className="signup">
-        <Title>Sign Up</Title>
-        <Input
-          type="text"
-          name="username"
-          id="usernameId"
-          placeholder="Username"
-        />
+        <Form className="signup">
+          <Title>Sign Up</Title>
+          <Input
+            type="text"
+            name="username"
+            id="usernameId"
+            placeholder="Username"
+          />
 
-        <Input type="email" name="email" id="emailId" placeholder="Email" />
-        <Input
-          type="password"
-          name="password"
-          id="passwordId"
-          placeholder="Password"
-        />
-        <Link href="#" onClick={handleClick}>
-          Already have an Account?
-        </Link>
-        <Button>Sign Up</Button>
-      </Form>
+          <Input type="email" name="email" id="emailId" placeholder="Email" />
+          <Input
+            type="password"
+            name="password"
+            id="passwordId"
+            placeholder="Password"
+          />
+          <Button>Sign Up</Button>
+        </Form>
 
-      <Text className="text1" clicked={click}>
-        <h1>Welcome!</h1>
-        Don't have an account?
-        <br />
-        <span className="attention">Get your boarding pass!</span>
-        <span className="attention-icon">⤶</span>
-      </Text>
+        <Text className="text1" clicked={click}>
+          <h1>Welcome!</h1>
+          Don't have an account?
+          <br />
+          <span className="attention">Get your boarding pass!</span>
+          <span className="attention-icon">⤶</span>
+        </Text>
 
-      <Text className="text2" clicked={click}>
-        <h1>Hi There!</h1>
-        Already have an account?
-        <br />
-        <span className="attention">Fly away!</span>
-        <span className="attention-icon">⤷</span>
-      </Text>
+        <Text className="text2" clicked={click}>
+          <h1>Hi There!</h1>
+          Already have an account?
+          <br />
+          <span className="attention">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fly
+            away!
+          </span>
+          <span className="attention-icon">⤷</span>
+        </Text>
 
-      <Box1 clicked={click} />
-      <Box2 clicked={click} />
-    </BackgroundBox>
+        <Box1 clicked={click} />
+        <Box2 clicked={click} />
+      </BackgroundBox>
+    </div>
   );
 };
 
