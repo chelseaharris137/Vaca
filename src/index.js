@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
+import Form from "./components/Form";
+import "./styles/App.scss";
 
 const App = () => {
   const env = process.env.NODE_ENV;
   return (
     <div>
-      <h1>{env}</h1>
-      <p>Hello world!</p>
+      <Form />
     </div>
   );
 };

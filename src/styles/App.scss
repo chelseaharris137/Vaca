@@ -1,0 +1,23 @@
+$primary-color: #609ebb;
+$secondary-color: #8e8647;
+$dark-beige: #be976e;
+$cream: #fdedc4;
+$pink-beige: #dcac89;
+$text-color: #fff;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  color: $text-color;
+  box-sizing: border-box;
+  background-color: #609ebb;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23dcac89' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23be976e' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23cea47a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b28e5e' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23bf9c6c' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23a5864f' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23b0945e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23987f40' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%239f8d52' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23897731' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%238e8647' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%237a7022' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
