@@ -11,6 +11,7 @@ const move = keyframes`
     opacity:1;
 }
 `;
+//styling for wrapper and text
 const BackgroundBox = styled.div`
   background-color: #fdedc4;
   height: 55vh;
@@ -53,7 +54,7 @@ const BackgroundBox = styled.div`
     transition: all 1s;
   }
 `;
-
+//styling and animation for left box
 const Box1 = styled.div`
   width: 50%;
   height: 100%;
@@ -77,7 +78,7 @@ const Box1 = styled.div`
   &::after {
   }
 `;
-
+//styling and animation for right box
 const Box2 = styled.div`
   background-color: #fff;
   width: 50%;
